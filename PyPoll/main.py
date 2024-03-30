@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
 import pandas as pd
+import os
 
 # Function to analyze election data
 def analyze_election(csv_file):
@@ -38,5 +35,6 @@ def analyze_election(csv_file):
     print("-------------------------")
 
 # Run election analysis on the provided dataset
-analyze_election("election_data.csv")
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
+analyze_election("Resources/election_data.csv")
 
